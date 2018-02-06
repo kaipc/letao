@@ -1,12 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>我的乐淘后台登录页面</title>
+    <link rel="icon" href="images/favicon.ico">
+    <!-- 1. 引入bootstrap的样式 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 2. 引入字体图标 -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <!-- 3. 引入后台登录的less -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 4. 引入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
 </head>
+    
 <body>
-    我的乐淘后台
+    <div class="layout">
+        <aside class="left">
+            <div class="left-title">
+                <img src="./images/monkey.png" alt="">
+                <p>阿虎</p>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="index.html" class="fa fa-user">用户管理</a></li>
+                <li class="list-group-item">
+                    <a data-toggle="collapse" href="#collapseExample">分类管理</a>
+                    
+                    <div class="collapse" id="collapseExample">
+                        <div class="well">
+                            <ul>
+                                <li><a href="./categoryFirst.html">一级分类</a></li>
+                                <li><a href="./categorySecond.html">一级分类</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item"><a href="productMange.html">商品管理</a></li>
+            </ul>
+        </aside>
+        <main class="right">
+            <div class="right-title clearfix">
+                <a href="#" class="pull-left fa fa-navicon"></a>
+                <a href="#" class="pull-right fa fa-sign-out">退出</a>
+            </div>
+            <div class="right-body"></div>
+        </main>
+    </div>
+    <script type='text/html' id='userTmp'>
+        <table class="table table-bordered">
+           <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>选择</th>
+                        <th>用户名</th>
+                        <th>手机号</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{each rows as value i}}
+                    <tr>
+                        <th scope="row">
+                            <input type="checkbox">
+                        </th>
+                        <td>{{value.username}}</td>
+                        <td>{{value.mobile}}</td>
+                        {{if value.isDelete == 0}}
+                        <td>已禁用</td>
+                        <td>
+                            <button class="btn btn-success btn-options" data-id='{{value.id}}' data-is-delete={{value.isDelete}}>启用</button>
+                        </td>
+                        {{else}}
+                        <td>已启用</td>
+                        <td>
+                            <button class="btn btn-danger btn-options" data-id='{{value.id}}' data-is-delete={{value.isDelete}}>禁用</button>
+                        </td>
+                        {{/if}}
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </table>
+        <div class="page-navigation clearfix">
+            <div class="pull-left">
+                <p>显示第 <span class="page">{{page}}</span> 页的 <span class="page-size">{{size}}</span> 条记录，总共 <span class="total">{{total}}</span> 条记录</p>
+            </div>
+            <div class="pull-right">
+               
+                <ul class="pagination">
+                    <li>
+                    <a href="javascript:;" aria-label="Previous" class="prev" data-page="{{page}}" data-page-max="{{pageMax}}">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                    {{each pageCount as value i}}
+                    </li>
+                    <li><a href="javascript:;" data-page="{{value}}">{{value}}</a></li>
+                    {{/each}}
+                    <li>
+                    <a href="javascript:;" aria-label="Next" class="next" data-page="{{page}}" data-page-max="{{pageMax}}">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+        </div>
+    </script>
+    <!-- 5. 引入jquery -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 6. 引入bootstrap的js文件 -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 7. 引入模板引擎的js文件 -->
+    <script src="lib/artTemplate/template.js"></script>
+    <!-- 8. 引入自己的js文件 -->
+    <script src="js/index.js"></script>
+    <script>
+        var letao;
+        $(function () {
+            letao = new Letao();
+            letao.getUser();
+            letao.getPageUser();
+            letao.updateUser();
+        });
+    </script>
 </body>
+
 </html>

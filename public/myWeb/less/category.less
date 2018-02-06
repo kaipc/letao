@@ -1,0 +1,88 @@
+@import './base.less';
+html,body{
+    height: 100%;
+}
+#header{
+    >.fa-arrow-left{
+        position: absolute;
+        left: 0.3125rem;
+        top: 0.40625rem;
+        color: #fff;
+    }
+    >form{
+        margin-right: 1.09375rem;
+        margin-left: 1.09375rem;
+        margin-top: 0.15625rem;
+        >input{
+            background-color: #fff;
+            text-align: left;
+            // color: #000;
+            margin-bottom: 0;
+            font-size: 0.375rem;
+        }
+    }
+    .fa-search{
+        position: absolute;
+        right: 0.3125rem;
+        top: 0.40625rem;
+        color: #fff;
+        
+    }
+    
+}
+
+#category{
+    height: 100%;
+    padding: 1.40625rem 0;  
+    #category-left{
+        position: absolute;
+        top: 1.40625rem;
+        >ul{
+            >li{
+                >a{
+                    font-size: 0.375rem;
+                    display: block;
+                    width: 2.8125rem;
+                    line-height: 1.40625rem;
+                    border-right: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+                    text-align: center;
+                    background-color: #fff;
+                    color: #666
+                }
+                &.active a{
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+    #category-right{
+        position: relative;
+        margin-left: 2.8125rem;
+        height: 100%;
+        .wrapper{
+            padding: 0.3125rem;
+            .mui-scroll{
+                // padding: 1.71875rem 0.3125rem;
+                // padding-right: 0;
+                // position: relative;
+                height: 101%;
+                .mui-row{
+                    >div{
+                        >a{
+                            text-align: center;
+                            background-color: #fff;
+                            display: block;
+                            >img{
+                                width: 100%;
+                            }
+                            >p{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

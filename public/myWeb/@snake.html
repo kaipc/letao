@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas {
+            border: 1px solid #000;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+<canvas width='400' height='400' id='canvas'></canvas>
+<script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var snake=[42,41];
+    var fx=1;
+    var sw=43;
+    var head;
+    function draw(t,color) {
+        context.fillStyle=color;
+        context.fillRect(t%20*20+1,~~(t/20)*20+1,18,18);
+        
+    }
+    !function () {
+        head = snake[0]+fx;
+        snake.unshift(head);
+        
+        draw(head,'skyblue');
+
+        setTimeout(arguments.callee,120);
+    }()
+   
+</script>
+</body>
+</html>

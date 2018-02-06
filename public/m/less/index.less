@@ -1,0 +1,125 @@
+@import "base.less";
+
+html,body{
+    height: 100%;
+    // overflow: hidden;
+}
+
+#wrapper{
+    height: 100%;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    .list{
+        background-color: #fff;
+        #slide{
+           
+        }
+        #nav{
+            padding: 10px;
+            .mui-row{
+                >div{
+                    
+                    >a{
+                        display: block;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        #banner{
+            padding: 0 10px;
+            .mui-row{
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+                >div{
+                    >div{
+                        
+                        >a{
+                            width: 100%;
+                            display: block;
+                            >div{
+                                float: left;
+                                >img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+        #products{
+            padding:0 10px;
+            #brand{
+
+                a{
+                display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            [id$=area]{
+                
+                a{
+                display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .mui-row{
+                    >.mui-col-xs-6{
+                        padding: 5px;
+                        .product{
+                            padding: 10px 0;
+                            text-align: center;
+                            box-shadow: 0 0 1px #ccc;
+                            >a{
+                                display: block;
+                                >img{
+                                    width: 100%;
+
+                                }
+                            }
+                            .product-name{
+                                color: #8f8f94;
+                                font-size: 14px;
+                                margin-bottom: 10px;
+                            }
+                            .product-price{
+                                margin-bottom: 10px;
+                                .now-price{
+                                    color: #f30;
+                                    font-size: 12px;
+                                }
+                                .old-price{
+                                    font-size: 12px;
+                                    color: #8f8f94;
+
+                                }
+                            }
+                            .product-buy{
+                                >button{
+
+                                    backaground: @main-color;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+

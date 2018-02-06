@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/user.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id='header'>
+        <a href="javascript:history.back();" class="fa fa-arrow-left"></a>
+        <h3>我的用户界面</h3>
+
+    </header>
+    <main id='main'>
+       <!-- <div class="user-info">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+                        <div class="mui-media-body">
+                            用户名:itcast
+                            <p class='mui-ellipsis'>绑定手机:1333333333</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">账号与安全</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">我的购物车</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">我的收货地址</a>
+                </li>
+            </ul>
+       </div>
+       <div class="exit">
+           <a href="#" class='btn-logout'>退出登录</a>
+       </div> -->
+    </main>
+    <script type='text/html' id='getUserDataTmp'>
+        <div class="user-info">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+                        <div class="mui-media-body">
+                            用户名:{{username}}
+                            <p class='mui-ellipsis'>绑定手机:{{mobile}}</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">账号与安全</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">我的购物车</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">我的收货地址</a>
+                </li>
+            </ul>
+       </div>
+       <div class="exit">
+           <a href="#" class='btn-logout'>退出登录</a>
+       </div>
+    </script>
+    <footer id='footer'>
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+
+                <a href='index.html' class="fa fa-home">
+                </a>
+                <span>首页</span>
+
+            </div>
+            <div class="mui-col-xs-3 active">
+
+                <a href='./category.html' class="fa fa-bars">
+                </a>
+                <span>分类</span>
+
+            </div>
+            <div class="mui-col-xs-3">
+
+                <a href='cart.html' class="fa fa-shopping-cart">
+                </a>
+                <span>购物车</span>
+
+            </div>
+            <div class="mui-col-xs-3">
+
+                <a class="fa fa-user" href='./user.html'>
+                </a>
+                <span>个人中心</span>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src='./lib/artTemplate/template.js'></script>
+    <script src='./lib/zepto/zepto.min.js'></script><script src='./js/rem.js'></script>
+    <script src="./js/user.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+@import 'base.less';
+body{
+    background-color: #fff;
+}
+#header{
+    .fa-refresh{
+
+        position: absolute;
+        right: 0.40625rem;
+        top: 0.40625rem;
+        color: #fff;
+    }
+    .fa-arrow-left{
+        position: absolute;
+        left: 0.40625rem;
+        top: 0.40625rem;
+        color: #fff;
+    }
+    >h3{
+        color: #fff;
+        font-size: 0.53125rem;
+        line-height: 1.09375rem;
+        font-weight: normal;
+        
+    }
+}
+
+#main{
+    padding: 1.40625rem 0.3125rem 3.125rem 0.3125rem;
+    >ul{
+        >li{
+            >div{
+                .btn-edit{
+
+                }
+                .btn-delete{
+                    
+                }
+                .mui-table-cell{
+                    .mui-media-body{
+                       
+                        font-size: 0.4375rem;
+                        color: #000;
+                        .product-price{
+                            .price{
+                                color:#f40; 
+                                font-size: 0.53125rem;
+                                font-weight: 600;
+                            }   
+                            .old-price{
+
+                            }
+                        }
+                        .product-size{
+
+                        }
+                        .mui-pull-right{
+                            margin-right: 0.46875rem;
+                        }
+                        .product-options{
+                            position: absolute;
+                            left: 0.9375rem;
+                            bottom: 0.46875rem;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#order{
+    position: fixed;
+    bottom: 1.71875rem;
+    height: 1.40625rem;
+    width: 100%;
+    line-height: 1.875rem;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    .mui-pull-left{
+        font-size: 0.4375rem;
+        color: #f40;
+        font-weight: 600;
+        margin-left: 0.15625rem;
+    }
+    .mui-pull-right{
+        margin-top: 0.28125rem;
+        margin-right: 0.15625rem;
+    }
+}
+
+ .product-size{
+        padding: 0.3125rem;
+        border-bottom: 1px solid #ccc;
+        .btn-size{
+            width: 0.9375rem;
+            height: 0.9375rem;
+            border: 1px solid #ccc;
+            display: inline-block;
+            text-align: center;
+            line-height: 0.9375rem;
+            font-size: 0.4375rem;
+            margin-top: 0.15625rem;
+            
+                &.active{
+                    color: #f40;
+                }
+            
+        }
+    }

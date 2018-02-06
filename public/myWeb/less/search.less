@@ -1,0 +1,85 @@
+@import "base.less";
+html,body{
+    height: 100%;
+    background-color: #fff;
+}
+#header{
+    .fa-arrow-left{
+        position: absolute;
+        left: 0.40625rem;
+        top: 0.40625rem;
+        color: #fff;
+    }
+    >h3{
+        color: #fff;
+        font-size: 0.53125rem;
+        line-height: 1.09375rem;
+        font-weight: normal;
+    }
+}
+
+#search{
+    height: 100%;
+    padding: 1.40625rem 0;
+    .search-form{
+        padding: 0.3125rem;
+        >form{
+            position: relative;
+            
+            >input{
+                background-color: #fff;
+                text-align: left;
+                font-size: 0.4375rem;
+                border:1px solid @main-color;
+                margin-bottom: 0;
+            }
+            >button{
+                background-color: @main-color;
+                color: #fff;
+                position: absolute;
+                right: 0;
+                top: 0;
+                border-color: @main-color;
+                height: 1.0625rem;
+            }
+        }
+    }
+    .search-history{
+        padding: 0.3125rem;
+        .search-title{
+            >span{
+                font-size: 0.4375rem;
+                color: #666;
+            }
+            .fa-trash{
+                float:right;
+            }
+        }
+        .search-body{
+            margin-top: 0.3125rem;
+            >ul{
+                >li{
+                    &::after{
+                        left: 0;
+                    }
+                    height: 0.9375rem;
+                    line-height: 0.9375rem;
+                    >a{
+                        color: #666;
+                        font-size: 0.4375rem;
+                        padding: 0 0.3125rem;
+                        position: relative;
+                        border-right: 1px solid #ccc;
+                        border-left: 1px solid #ccc;
+                        >i{
+                            position: absolute;
+                            right: 0.3125rem;
+                            top: 0.25rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import 'base.less';
+html,body{
+    height: 100%;
+    // overflow: hidden;
+}
+body{
+    // 只设置body不能够清楚margin塌陷
+    // overflow: hidden;
+    background-color: #fff;
+}
+#header{
+    
+    .fa-arrow-left{
+        position: absolute;
+        left: 0.40625rem;
+        top: 0.40625rem;
+        color: #fff;
+    }
+    >h3{
+        color: #fff;
+        font-size: 0.53125rem;
+        line-height: 1.09375rem;
+        font-weight: normal;
+        
+    }
+}
+
+#main{
+
+    padding: 1.71875rem 0.3125rem;
+    >form{
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 0.4375rem;
+        >div{
+            &::after{
+                left: 0;
+            }
+            padding:0 0.3125rem;
+            >input{
+                font-size: 0.4375rem;
+
+            }
+            .btn-getVcode{
+                position: absolute;
+                right: 0.65625rem;
+                top: 0.09375rem;
+            }
+            .btn-register{
+                width: 100%;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import 'base.less';
+body {
+    background-color: #fff;
+}
+
+
+/* 购物车主体 */
+
+#main {
+    .mui-table-view-cell {
+        padding: 5px 20px;
+        .mui-media {
+            .mui-media-body {
+                font-size: 14px;
+                .product-name {
+                    //默认媒体的标题是不能换行的
+                    //white-space: nowrap;
+                    //设置成能换行的
+                    white-space: normal;
+                }
+                .product-price {
+                    .now-price {
+                        color: #f40;
+                        font-weight: 600;
+                    }
+                    .old-price {
+                        color: #ccc;
+                    }
+                }
+                .mui-pull-right {
+                    color: #888;
+                    margin-right: 20px;
+                }
+                .product-size {
+                    color: #888;
+                }
+                .product-options {
+                    position: absolute;
+                    left: 30px;
+                    bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+/* 订单区域 */
+
+#order {
+    position: fixed;
+    width: 100%;
+    bottom: 45px;
+    height: 40px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 40px;
+    .mui-pull-left {
+        color: #f40;
+        font-weight: 600;
+    }
+}
+.mui-numbox{
+	width: 110px;
+}
+.mui-numbox [class*=numbox-btn], .mui-numbox [class*=btn-numbox]{
+	width: 30px;
+}
+/* 商品尺码的公共样式 */
+.product-size {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    .btn-size {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ccc;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+        margin-top: 5px;
+        &.active {
+            background-color: yellowgreen;
+        }
+    }
+}
